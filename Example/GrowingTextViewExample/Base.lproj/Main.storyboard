@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrowingTextViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q3-IQ-q9B" userLabel="InputView">
+                                <rect key="frame" x="0.0" y="146" width="414" height="49"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEe-Lj-XO6" customClass="WXGrowingTextView" customModule="WXGrowingTextView">
+                                        <rect key="frame" x="16" y="7" width="382" height="35"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="L9g-31-5ru"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AEe-Lj-XO6" secondAttribute="bottom" constant="7" id="12q-yU-GUw"/>
+                                    <constraint firstItem="AEe-Lj-XO6" firstAttribute="top" secondItem="6Q3-IQ-q9B" secondAttribute="top" constant="7" id="Hod-Gn-E5R"/>
+                                    <constraint firstAttribute="trailing" secondItem="AEe-Lj-XO6" secondAttribute="trailing" constant="16" id="WNq-nr-6VI"/>
+                                    <constraint firstItem="AEe-Lj-XO6" firstAttribute="leading" secondItem="6Q3-IQ-q9B" secondAttribute="leading" constant="16" id="wHD-OS-RgV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Q3-IQ-q9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ifn-Nt-9zH"/>
+                            <constraint firstItem="6Q3-IQ-q9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="isg-bk-cCr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Q3-IQ-q9B" secondAttribute="trailing" id="y54-Y0-P0g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="growingTextView" destination="AEe-Lj-XO6" id="9g9-p7-n84"/>
+                        <outlet property="textViewHeightConstraint" destination="L9g-31-5ru" id="EJp-mJ-SNW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>

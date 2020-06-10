@@ -1,0 +1,16 @@
+PODS:
+  - WXGrowingTextView (0.0.1)
+
+DEPENDENCIES:
+  - WXGrowingTextView (from `../`)
+
+EXTERNAL SOURCES:
+  WXGrowingTextView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WXGrowingTextView: e23b5e0937b0ac4a1e87f59906cecdf9cfae6bac
+
+PODFILE CHECKSUM: 04385943b22845961b7837971abfcba299ee4471
+
+COCOAPODS: 1.9.1
