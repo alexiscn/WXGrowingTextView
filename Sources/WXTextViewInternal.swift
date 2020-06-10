@@ -12,6 +12,7 @@ public class WXTextViewInternal: UITextView {
     
     private var isScrollEnabledTemp = false
     
+    /// The text of the text view.
     public override var text: String! {
         willSet {
             // If one of GrowingTextView's superviews is a scrollView, and self.scrollEnabled is false,
@@ -32,18 +33,21 @@ public class WXTextViewInternal: UITextView {
         }
     }
     
+    /// The placeholder of text view.
     public var placeholder: String? = nil {
         didSet {
             setNeedsDisplay()
         }
     }
     
+    /// The color of the placeholder. The default value is UIColor.gray .
     public var placeholderColor: UIColor = .gray {
         didSet {
             setNeedsDisplay()
         }
     }
     
+    /// The font of the placeholder. The default value is UIFont.systemFont(ofSize: 15) .
     public var placeholderFont: UIFont = UIFont.systemFont(ofSize: 15)
     
     override public func draw(_ rect: CGRect) {

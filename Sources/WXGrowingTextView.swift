@@ -313,7 +313,17 @@ extension WXGrowingTextView {
             newHeight = maxHeight // not taller than maxHeight
         }
         
+        // If need change height
         if textView.frame.height != newHeight {
+            
+            if let maxH = maxHeight, newHeight >= maxH {
+                if !textView.isScrollEnabled {
+                    textView.isScrollEnabled = true
+                    textView.flashScrollIndicators()
+                }
+            } else {
+                textView.isScrollEnabled = false
+            }
             
             if isGrowingAnimationEnabled {
                 UIView.animate(withDuration: growingAnimationDuration, delay: 0, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
@@ -390,13 +400,14 @@ extension WXGrowingTextView {
         textView.delegate = nil
         textView.isHidden = true
         
-        var tempText = "-"
-        if numberOfLines > 0 {
-            for _ in 1 ..< numberOfLines {
-                tempText.append("\n|W|")
-            }
-        }
-        textView.text = tempText
+//        var tempText = "-"
+//        if numberOfLines > 0 {
+//            for _ in 1 ..< numberOfLines {
+//                tempText.append("\n|W|")
+//            }
+//        }
+//        textView.text = tempText
+        textView.text = String(repeating: "|W|\n", count: numberOfLines).appending("|W|")
         let height = measureHeight()
         
         textView.text = savedText

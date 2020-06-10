@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q3-IQ-q9B" userLabel="InputView">
-                                <rect key="frame" x="0.0" y="146" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEe-Lj-XO6" customClass="WXGrowingTextView" customModule="WXGrowingTextView">
                                         <rect key="frame" x="16" y="7" width="382" height="35"/>
@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="AEe-Lj-XO6" secondAttribute="bottom" constant="7" id="12q-yU-GUw"/>
-                                    <constraint firstItem="AEe-Lj-XO6" firstAttribute="top" secondItem="6Q3-IQ-q9B" secondAttribute="top" constant="7" id="Hod-Gn-E5R"/>
+                                    <constraint firstItem="AEe-Lj-XO6" firstAttribute="top" secondItem="6Q3-IQ-q9B" secondAttribute="top" priority="750" constant="7" id="Hod-Gn-E5R"/>
                                     <constraint firstAttribute="trailing" secondItem="AEe-Lj-XO6" secondAttribute="trailing" constant="16" id="WNq-nr-6VI"/>
                                     <constraint firstItem="AEe-Lj-XO6" firstAttribute="leading" secondItem="6Q3-IQ-q9B" secondAttribute="leading" constant="16" id="wHD-OS-RgV"/>
                                 </constraints>
@@ -38,13 +38,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Q3-IQ-q9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ifn-Nt-9zH"/>
-                            <constraint firstItem="6Q3-IQ-q9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="isg-bk-cCr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Q3-IQ-q9B" secondAttribute="bottom" priority="750" id="mPJ-8A-NUl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Q3-IQ-q9B" secondAttribute="trailing" id="y54-Y0-P0g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="growingTextView" destination="AEe-Lj-XO6" id="9g9-p7-n84"/>
+                        <outlet property="inputViewBottomConstraint" destination="mPJ-8A-NUl" id="SFO-Od-lUh"/>
                         <outlet property="textViewHeightConstraint" destination="L9g-31-5ru" id="EJp-mJ-SNW"/>
                     </connections>
                 </viewController>
