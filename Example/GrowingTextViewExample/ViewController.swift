@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         growingTextView.minHeight = 35
         growingTextView.clipsToBounds = true
         growingTextView.delegate = self
+        growingTextView.placeholder = "说点什么吧"
         // Do any additional setup after loading the view.
     }
 

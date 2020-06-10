@@ -58,15 +58,24 @@ open class WXGrowingTextView: UIView {
     }
     
     /// The content inset.
-    open var contentInset: UIEdgeInsets = UIEdgeInsets(top: 8, left: 5, bottom: 8, right: 5) {
+    open var contentInset: UIEdgeInsets = .zero {
         didSet {
+            let lineFragmentPadding = textView.textContainer.lineFragmentPadding
             var rect = self.frame
-            rect.origin.x = contentInset.left
+            rect.origin.x = contentInset.left - lineFragmentPadding
             rect.origin.y = contentInset.top - contentInset.bottom
-            rect.size.width = rect.size.width - contentInset.left - contentInset.right
+            rect.size.width = rect.size.width - contentInset.left - contentInset.right - 2 * lineFragmentPadding
+            rect.size.height = rect.size.height - contentInset.top - contentInset.bottom
             textView.frame = rect
             updateMaxNumberOfLines()
             updateMinNumberOfLines()
+        }
+    }
+    
+    open var textContainerInset: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
+        didSet {
+            textView.textContainerInset = textContainerInset
+            textView.setNeedsDisplay()
         }
     }
     
@@ -126,6 +135,7 @@ open class WXGrowingTextView: UIView {
         textView.isScrollEnabled = false
         textView.font = font
         textView.contentInset = .zero
+        textView.textContainerInset = textContainerInset
         textView.text = "-"
         textView.contentMode = .redraw
         addSubview(textView)
@@ -134,6 +144,7 @@ open class WXGrowingTextView: UIView {
         minNumberOfLines = 1
         maxNumberOfLines = 5
         textView.text = ""
+        contentInset = .zero
         
         maxNumberOfLines = 5
     }
@@ -239,7 +250,7 @@ extension WXGrowingTextView {
     }
     
     /// The color of the placeholder
-    open var placeholderColor: UIColor? {
+    open var placeholderColor: UIColor {
         get { return textView.placeholderColor }
         set { textView.placeholderColor = newValue }
     }

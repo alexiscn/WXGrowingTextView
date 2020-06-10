@@ -26,7 +26,11 @@ public class WXTextViewInternal: UITextView {
     }
     
     /// A Boolean value indicating whether the receiver displays placeholder.
-    public var displayPlaceholder: Bool = true
+    public var displayPlaceholder: Bool = true {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     public var placeholder: String? = nil {
         didSet {
@@ -34,7 +38,11 @@ public class WXTextViewInternal: UITextView {
         }
     }
     
-    public var placeholderColor: UIColor?
+    public var placeholderColor: UIColor = .gray {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     public var placeholderFont: UIFont = UIFont.systemFont(ofSize: 15)
     
@@ -44,13 +52,19 @@ public class WXTextViewInternal: UITextView {
         guard let placehoder = placeholder, displayPlaceholder else {
             return
         }
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = textAlignment
         
         let size = (placehoder as NSString).size(withAttributes: [
             .font: placeholderFont
         ])
         let x = textContainer.lineFragmentPadding + textContainerInset.left
-        let y = (bounds.height - size.height)/2.0
+        let y = textContainerInset.top + contentInset.top
         let rect = CGRect(x: x, y: y, width: size.width, height: size.height)
-        (placehoder as NSString).draw(in: rect, withAttributes: nil)
+        (placehoder as NSString).draw(in: rect, withAttributes: [
+            .font: placeholderFont,
+            .foregroundColor: placeholderColor,
+            .paragraphStyle: paragraphStyle
+        ])
     }
 }
