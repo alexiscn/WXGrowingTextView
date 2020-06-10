@@ -48,6 +48,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A34A09242490CA3B0004008E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A34A091E2490829B0004008E /* AutoLayoutStoryBoardViewController.swift */,
+				A34A0920249082A80004008E /* AutoLayoutCodeViewController.swift */,
+				A34A0922249082B70004008E /* ManualLayoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		A3B0FC15248F89B6006A4AC2 = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +79,10 @@
 		A3B0FC20248F89B6006A4AC2 /* GrowingTextViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				A34A09242490CA3B0004008E /* Controllers */,
 				A3B0FC21248F89B6006A4AC2 /* AppDelegate.swift */,
 				A3B0FC23248F89B6006A4AC2 /* SceneDelegate.swift */,
 				A3B0FC25248F89B6006A4AC2 /* ViewController.swift */,
-				A34A091E2490829B0004008E /* AutoLayoutStoryBoardViewController.swift */,
-				A34A0920249082A80004008E /* AutoLayoutCodeViewController.swift */,
-				A34A0922249082B70004008E /* ManualLayoutViewController.swift */,
 				A3B0FC27248F89B6006A4AC2 /* Main.storyboard */,
 				A3B0FC2A248F89B8006A4AC2 /* Assets.xcassets */,
 				A3B0FC2C248F89B8006A4AC2 /* LaunchScreen.storyboard */,

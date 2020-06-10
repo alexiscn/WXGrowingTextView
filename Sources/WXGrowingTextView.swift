@@ -133,6 +133,7 @@ open class WXGrowingTextView: UIView {
         textView = WXTextViewInternal(frame: rect, textContainer: textContainer)
         textView.delegate = self
         textView.isScrollEnabled = false
+        textView.showsHorizontalScrollIndicator = false
         textView.font = font
         textView.contentInset = .zero
         textView.textContainerInset = textContainerInset
