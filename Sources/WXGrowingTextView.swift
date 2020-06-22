@@ -99,7 +99,10 @@ open class WXGrowingTextView: UIView {
     
     open var attributedText: NSAttributedString? {
         get { return textView.attributedText }
-        set { textView.attributedText = newValue }
+        set {
+            textView.attributedText = newValue
+            textViewDidChange(textView)
+        }
     }
     
     open var isScrollEnabled: Bool {

@@ -1,13 +1,13 @@
 {
   "name": "WXGrowingTextView",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "license": {
     "type": "MIT"
   },
   "requires_arc": true,
   "source": {
     "git": "https://github.com/alexiscn/WXGrowingTextView.git",
-    "tag": "0.0.2"
+    "tag": "0.0.4"
   },
   "summary": "WXGrowingTextView",
   "homepage": "https://github.com/alexiscn/WXGrowingTextView",

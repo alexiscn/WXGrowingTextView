@@ -19,5 +19,3 @@ import WXGrowingTextView
 let textView = WXGrowingTextView(frame: .zero)
 textView.tintColor = .red
 ```
-
-

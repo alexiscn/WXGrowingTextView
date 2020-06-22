@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'WXGrowingTextView'
-  s.version      = '0.0.3'
+  s.version      = '0.0.4'
   s.license = 'MIT'
   s.requires_arc = true
   s.source = { :git => 'https://github.com/alexiscn/WXGrowingTextView.git', :tag => s.version.to_s }
