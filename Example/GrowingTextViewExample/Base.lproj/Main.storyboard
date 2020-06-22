@@ -15,29 +15,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q3-IQ-q9B" userLabel="InputView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lKw-yQ-fgE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-1d-7dt" userLabel="InputViewBackground">
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Q3-IQ-q9B" userLabel="InputView">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEe-Lj-XO6" customClass="WXGrowingTextView" customModule="WXGrowingTextView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEe-Lj-XO6" customClass="WXGrowingTextView" customModule="WXGrowingTextView">
                                         <rect key="frame" x="16" y="7" width="382" height="35"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="L9g-31-5ru"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="AEe-Lj-XO6" secondAttribute="bottom" constant="7" id="12q-yU-GUw"/>
                                     <constraint firstItem="AEe-Lj-XO6" firstAttribute="top" secondItem="6Q3-IQ-q9B" secondAttribute="top" priority="750" constant="7" id="Hod-Gn-E5R"/>
+                                    <constraint firstAttribute="height" constant="49" id="PQp-Fz-8rc"/>
                                     <constraint firstAttribute="trailing" secondItem="AEe-Lj-XO6" secondAttribute="trailing" constant="16" id="WNq-nr-6VI"/>
+                                    <constraint firstAttribute="bottom" secondItem="AEe-Lj-XO6" secondAttribute="bottom" constant="7" id="b1H-k0-xgY"/>
                                     <constraint firstItem="AEe-Lj-XO6" firstAttribute="leading" secondItem="6Q3-IQ-q9B" secondAttribute="leading" constant="16" id="wHD-OS-RgV"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lKw-yQ-fgE" secondAttribute="trailing" id="7kR-Jp-mgn"/>
                             <constraint firstItem="6Q3-IQ-q9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ifn-Nt-9zH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eCo-1d-7dt" secondAttribute="trailing" id="IkL-Vg-fGB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lKw-yQ-fgE" secondAttribute="bottom" id="IqI-bA-yXU"/>
+                            <constraint firstItem="eCo-1d-7dt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NC9-D8-qWy"/>
+                            <constraint firstItem="lKw-yQ-fgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S7e-yD-wVm"/>
+                            <constraint firstItem="lKw-yQ-fgE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tfn-h8-rgd"/>
+                            <constraint firstAttribute="bottom" secondItem="eCo-1d-7dt" secondAttribute="bottom" id="V3e-y7-XGt"/>
+                            <constraint firstItem="eCo-1d-7dt" firstAttribute="height" secondItem="6Q3-IQ-q9B" secondAttribute="height" id="VnE-aI-AkI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Q3-IQ-q9B" secondAttribute="bottom" priority="750" id="mPJ-8A-NUl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Q3-IQ-q9B" secondAttribute="trailing" id="y54-Y0-P0g"/>
                         </constraints>
@@ -46,7 +60,8 @@
                     <connections>
                         <outlet property="growingTextView" destination="AEe-Lj-XO6" id="9g9-p7-n84"/>
                         <outlet property="inputViewBottomConstraint" destination="mPJ-8A-NUl" id="SFO-Od-lUh"/>
-                        <outlet property="textViewHeightConstraint" destination="L9g-31-5ru" id="EJp-mJ-SNW"/>
+                        <outlet property="inputViewHeightConstraint" destination="PQp-Fz-8rc" id="2hP-DI-u6l"/>
+                        <outlet property="tableView" destination="lKw-yQ-fgE" id="kNd-kM-bLn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

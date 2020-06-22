@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A34A091F2490829B0004008E /* AutoLayoutStoryBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A091E2490829B0004008E /* AutoLayoutStoryBoardViewController.swift */; };
-		A34A0921249082A90004008E /* AutoLayoutCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A0920249082A80004008E /* AutoLayoutCodeViewController.swift */; };
-		A34A0923249082B70004008E /* ManualLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A0922249082B70004008E /* ManualLayoutViewController.swift */; };
 		A3B0FC22248F89B6006A4AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FC21248F89B6006A4AC2 /* AppDelegate.swift */; };
 		A3B0FC24248F89B6006A4AC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FC23248F89B6006A4AC2 /* SceneDelegate.swift */; };
 		A3B0FC26248F89B6006A4AC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FC25248F89B6006A4AC2 /* ViewController.swift */; };
@@ -22,9 +19,6 @@
 /* Begin PBXFileReference section */
 		3E021004B70898D00A612221 /* Pods_GrowingTextViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowingTextViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C89FA9C243168EC0B520DCB /* Pods-GrowingTextViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowingTextViewExample.debug.xcconfig"; path = "Target Support Files/Pods-GrowingTextViewExample/Pods-GrowingTextViewExample.debug.xcconfig"; sourceTree = "<group>"; };
-		A34A091E2490829B0004008E /* AutoLayoutStoryBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutStoryBoardViewController.swift; sourceTree = "<group>"; };
-		A34A0920249082A80004008E /* AutoLayoutCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutCodeViewController.swift; sourceTree = "<group>"; };
-		A34A0922249082B70004008E /* ManualLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLayoutViewController.swift; sourceTree = "<group>"; };
 		A3B0FC1E248F89B6006A4AC2 /* GrowingTextViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowingTextViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B0FC21248F89B6006A4AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B0FC23248F89B6006A4AC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,16 +42,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A34A09242490CA3B0004008E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A34A091E2490829B0004008E /* AutoLayoutStoryBoardViewController.swift */,
-				A34A0920249082A80004008E /* AutoLayoutCodeViewController.swift */,
-				A34A0922249082B70004008E /* ManualLayoutViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		A3B0FC15248F89B6006A4AC2 = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +63,6 @@
 		A3B0FC20248F89B6006A4AC2 /* GrowingTextViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				A34A09242490CA3B0004008E /* Controllers */,
 				A3B0FC21248F89B6006A4AC2 /* AppDelegate.swift */,
 				A3B0FC23248F89B6006A4AC2 /* SceneDelegate.swift */,
 				A3B0FC25248F89B6006A4AC2 /* ViewController.swift */,
@@ -241,11 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A34A0921249082A90004008E /* AutoLayoutCodeViewController.swift in Sources */,
 				A3B0FC26248F89B6006A4AC2 /* ViewController.swift in Sources */,
 				A3B0FC22248F89B6006A4AC2 /* AppDelegate.swift in Sources */,
-				A34A0923249082B70004008E /* ManualLayoutViewController.swift in Sources */,
-				A34A091F2490829B0004008E /* AutoLayoutStoryBoardViewController.swift in Sources */,
 				A3B0FC24248F89B6006A4AC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
