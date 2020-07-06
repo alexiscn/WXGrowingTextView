@@ -1,5 +1,5 @@
 PODS:
-  - WXGrowingTextView (0.0.5)
+  - WXGrowingTextView (0.0.6)
 
 DEPENDENCIES:
   - WXGrowingTextView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WXGrowingTextView: 66d915f9125d032811e1dbcf9841fa1274856a41
+  WXGrowingTextView: 483849294508784a755212c925b70811f257f2db
 
 PODFILE CHECKSUM: 04385943b22845961b7837971abfcba299ee4471
 

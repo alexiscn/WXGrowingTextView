@@ -258,6 +258,12 @@ extension WXGrowingTextView {
         get { return textView.placeholderColor }
         set { textView.placeholderColor = newValue }
     }
+    
+    /// The text font of the placeholder.  The default value is UIFont.systemFont(ofSize: 15) .
+    open var placeholderFont: UIFont {
+        get { return textView.placeholderFont }
+        set { textView.placeholderFont = newValue }
+    }
 }
 
 // MARK: - UITextViewDelegate
